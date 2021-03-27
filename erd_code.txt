@@ -1,0 +1,26 @@
+movies
+--
+movie_id VARCHAR(20) PK FK >- movie_awards.movie_id
+movie_title VARCHAR(250)
+year INT
+director_id INT FK >- directors.director_id
+
+oscar_categories
+--
+oscar_id INT PK
+award_category VARCHAR(250)
+
+movie_awards
+--
+movie_id VARCHAR(20) PK FK
+oscar_id INT PK FK >- oscar_categories.oscar_id
+
+directors
+--
+director_id INT PK
+director_name VARCHAR(250)
+
+directing_awards
+--
+director_id INT PK FK >- directors.director_id
+oscar_id INT PK FK >- oscar_categories.oscar_id
