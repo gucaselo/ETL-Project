@@ -23,3 +23,14 @@ INNER JOIN oscar_categories AS oc ON
 da.oscar_id = oc.oscar_id
 INNER JOIN movies AS m ON
 d.director_id = m.director_id; 
+
+-- Awarded director for Movie 'Avatar' including Directors name, Award category, Movie title and Movie year
+SELECT d.director_name, oc.award_category, m.movie_title, m.year
+FROM directors AS d
+INNER JOIN directing_awards AS da ON
+d.director_id = da.director_id
+INNER JOIN oscar_categories AS oc ON
+da.oscar_id = oc.oscar_id
+INNER JOIN movies AS m ON
+d.director_id = m.director_id 
+WHERE m.movie_title = 'Avatar';
