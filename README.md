@@ -20,5 +20,6 @@ Loaded the data into the relational database, PostGRES, after we finished cleani
 
 Database was manually created and named “movies_db” and by using classes we created our tables.
 
+<img src="erd/ERD.PNG" width="75%"/>
 
 
